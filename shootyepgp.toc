@@ -1,5 +1,5 @@
 ## Interface: 11200
-## Title: shootyepgp-BRUTAL | |cff808080<BRUTAL>|r
+## Title: shootyepgp | |cff808080<BRUTAL>|r
 ## Notes: Effort Points/Gear Points Loot System for BRUTAL, N'Zoth
 ## Author: Roadblock / Horyoshi / banananenkaas
 ## X-Website: https://github.com/bananenkaas
