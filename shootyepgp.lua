@@ -398,7 +398,7 @@ function sepgp:buildMenu()
         end
       end,
       min = 0.01,
-      max = 0.5,
+      max = 1.1,
       step = 0.01,
       bigStep = 0.05,
       isPercent = true,
