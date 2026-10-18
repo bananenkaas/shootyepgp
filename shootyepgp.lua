@@ -1154,12 +1154,6 @@ function sepgp:addonComms(prefix,message,channel,sender)
     elseif who == "RESERVES" and what == "AWARD" then
       msg = string.format(L["%d EP awarded to Reserves."],amount)
       self._lastReserveAwardReceived = GetTime()
-    elseif who == "VERSION" then
-      local out_of_date, version_type = self:parseVersion(self._versionString,what)
-      if (out_of_date) and self._newVersionNotification == nil then
-        self._newVersionNotification = false -- only inform once per session
-        self:defaultPrint(string.format(L["New %s version available: |cff00ff00%s|r"],version_type,what))
-        self:defaultPrint(string.format(L["Visit %s to update."],self._websiteString))
       end
       if (IsGuildLeader()) then
         self:shareSettings()
