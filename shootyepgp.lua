@@ -374,27 +374,6 @@ function sepgp:buildMenu()
       get = function() return sepgp_saychannel end,
       set = function(v) sepgp_saychannel = v end,
       validate = { "PARTY", "RAID", "GUILD", "OFFICER" },
-    }    
-    options.args["set_decay"] = {
-      type = "range",
-      name = L["Set Decay %"],
-      desc = L["Set Decay percentage (Admin only)."],
-      order = 110,
-      usage = "<Decay>",
-      get = function() return (1.0-sepgp_decay) end,
-      set = function(v) 
-        sepgp_decay = (1 - v)
-        options.args["decay"].desc = string.format(L["Decays all EPGP by %s%%"],(1-sepgp_decay)*100)
-        if (IsGuildLeader()) then
-          sepgp:shareSettings(true)
-        end
-      end,
-      min = 0.01,
-      max = 0.5,
-      step = 0.01,
-      bigStep = 0.05,
-      isPercent = true,
-      hidden = function() return not (admin()) end,    
     }
     options.args["set_discount_header"] = {
       type = "header",
