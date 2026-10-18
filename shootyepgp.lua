@@ -9,13 +9,13 @@ local G = AceLibrary("Gratuity-2.0")
 local T = AceLibrary("Tablet-2.0")
 local L = AceLibrary("AceLocale-2.2"):new("shootyepgp")
 sepgp.VARS = {
-  basegp = 100,
-  minep = 100,
+  basegp = 300,
+  minep = 300,
   baseaward_ep = 100,
   decay = 0.9,
   max = 1000,
   timeout = 60,
-  minlevel = 1,
+  minlevel = 55,
   maxloglines = 500,
   prefix = "SEPGP_PREFIX",
   reservechan = "Reserves",
@@ -375,13 +375,26 @@ function sepgp:buildMenu()
       set = function(v) sepgp_saychannel = v end,
       validate = { "PARTY", "RAID", "GUILD", "OFFICER" },
     }    
-    options.args[""] = {
-      type = "execute",
-      name = L["Decay EPGP"],
-      desc = string.format(L["Decays all EPGP by %s%%"],(1-(sepgp_decay or sepgp.VARS.decay))*100),
-      order = 100,
-      hidden = function() return not (admin()) end,
-      func = function() sepgp:decay_epgp_v3() end 
+    options.args["set_decay"] = {
+      type = "range",
+      name = L["Set Decay %"],
+      desc = L["Set Decay percentage (Admin only)."],
+      order = 110,
+      usage = "<Decay>",
+      get = function() return (1.0-sepgp_decay) end,
+      set = function(v) 
+        sepgp_decay = (1 - v)
+        options.args["decay"].desc = string.format(L["Decays all EPGP by %s%%"],(1-sepgp_decay)*100)
+        if (IsGuildLeader()) then
+          sepgp:shareSettings(true)
+        end
+      end,
+      min = 0.01,
+      max = 0.5,
+      step = 0.01,
+      bigStep = 0.05,
+      isPercent = true,
+      hidden = function() return not (admin()) end,    
     }
     options.args["set_discount_header"] = {
       type = "header",
