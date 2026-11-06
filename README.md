@@ -1,4 +1,4 @@
-# shootyepgp - with a new, easy window Modified for BRUTAL on N'Zoth
+# shootyepgp - Modified for BRUTAL on N'Zoth
 
 EPGP loot system for World of Warcraft **1.12** (Turtle WoW / OctoWoW style 1.12.1 clients), with
 **one clean window for everything**: standings, every player's loot and EP / GP history, raids,
