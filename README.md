@@ -1,4 +1,4 @@
-# shootyepgp - with a new, easy window
+# shootyepgp - with a new, easy window Modified for BRUTAL on N'Zoth
 
 EPGP loot system for World of Warcraft **1.12** (Turtle WoW / OctoWoW style 1.12.1 clients), with
 **one clean window for everything**: standings, every player's loot and EP / GP history, raids,
@@ -8,16 +8,6 @@ This is [Road-block's shootyepgp](https://github.com/Road-block/shootyepgp) as e
 WoW guild (Turtle item prices, OS PRIO bids, strikes, bench check, Gnarlmoon sides, profession
 sync), plus a new interface built in the same flat style as the OctoBG addon. Nothing about how EPGP
 is stored changed: your guild's points stay in the officer notes.
-
-| | |
-|---|---|
-| **Home** ![Home](docs/screenshots/home.png) | **Standings** ![Standings](docs/screenshots/standings.png) |
-| **A raid (officer view, practice mode)** ![Raids](docs/screenshots/raids.png) | **Officer** ![Officer tools](docs/screenshots/officer.png) |
-| **Loot history** ![Loot](docs/screenshots/loot.png) | **EP / GP history** ![EP / GP history](docs/screenshots/history.png) |
-| **Bids** ![Bids](docs/screenshots/bids.png) | **Addon check** ![Addon check](docs/screenshots/addoncheck.png) |
-| **Tools** ![Tools](docs/screenshots/tools.png) | **Settings** ![Settings](docs/screenshots/settings.png) |
-
-Character names are hidden in every picture.
 
 ---
 
@@ -184,6 +174,7 @@ play. Sample players in the tests are invented.
 
 - **shootyepgp** by Road-block (MIT licence, see `LICENSE`), originally by shooty; zhCN by Qcat.
 - Turtle WoW guild fork (prices, OS PRIO, strikes, bench, Gnarlmoon sides, profession sync) by Horyoshi.
+- OctoWoW guild fork (prices) by bananenkaas
 - New window, history, raids, addon check and cleanup: bdot89.
 - The addon check message format comes from a responder shared by a friend of the guild.
 - Roboto font: Apache License 2.0 (`media\fonts\README.txt`).
